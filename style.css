@@ -509,7 +509,7 @@ input[type="email"]:focus{
 
 /* MEDIA QUERY */
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 850px) {
 
     /* Header styling */
     .navlist,
