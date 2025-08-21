@@ -4,24 +4,39 @@ const closeBtn = document.querySelector('.close-btn');
 const cardList = document.querySelector('.card-list');
 const cartList = document.querySelector('.cart-list');
 const cartTotal = document.querySelector('.cart-total');
+const cartValue = document.querySelector('.cart-value');
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
 
 cartIcon.addEventListener('click',()=> cartTab.classList.add('cart-tab-active'))
 closeBtn.addEventListener('click',()=> cartTab.classList.remove('cart-tab-active'));
+hamburger.addEventListener('click',()=> mobileMenu.classList.toggle('mobile-menu-active'));
 
 let productList = [];
 let cartProduct = [];
 
 const updateTotals = () =>{
     let totalPrice = 0;
+    let totalquantity = 0;
 
     document.querySelectorAll('.item').forEach(item =>{
 
+        const quantity = parseInt(item.querySelector('.quantity-value').textContent);
         const price = parseFloat(item.querySelector('.item-total').textContent.replace('$',''));
         totalPrice += price;
+        totalquantity += quantity;
     });
 
     cartTotal.textContent = `$${totalPrice.toFixed(2)}`;
+    cartValue.textContent = totalquantity;
+    clearcart(totalquantity);
 }
+
+const clearcart = (totalquantity)=>{
+    if (totalquantity < 1){
+        cartTab.classList.remove('cart-tab-active');
+    };
+};
 
 
 const showcards = ()=>{
