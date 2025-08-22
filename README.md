@@ -14,11 +14,12 @@ CraveKart is a responsive food delivery website that allows users to browse a me
 
 ⚡ Fast & Interactive UI – Smooth cart tab toggle and modern layout.
 
-📂 Product Data Fetching – Menu items are dynamically loaded from productlist.json.
+📂 Product Data Fetching – Menu items are dynamically loaded from productlist.jso
 
 
 
-
+link
+🔗https://shubham1io.github.io/Crave-Kart/
 
 
 
@@ -33,3 +34,4 @@ JavaScript – Core functionality, cart management, and interactivity
 Font Awesome – Icons for UI elements
 
 Google Fonts (Roboto Condensed) – Modern typography
+
