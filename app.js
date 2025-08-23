@@ -59,7 +59,6 @@ const showcards = ()=>{
         cardBtn.addEventListener('click',(e) =>{
             e.preventDefault();
             addToCart(product);
-            cartTab.classList.add('cart-tab-active');
 
         });
 
