@@ -12,6 +12,13 @@ cartIcon.addEventListener('click',()=> cartTab.classList.add('cart-tab-active'))
 closeBtn.addEventListener('click',()=> cartTab.classList.remove('cart-tab-active'));
 hamburger.addEventListener('click',()=> mobileMenu.classList.toggle('mobile-menu-active'));
 
+
+document.addEventListener('click',(event)=>{
+    if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)){
+        mobileMenu.classList.remove('mobile-menu-active');
+    }
+});
+
 let productList = [];
 let cartProduct = [];
 
